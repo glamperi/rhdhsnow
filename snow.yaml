@@ -22,7 +22,7 @@ spec:
           title: Requester Deptartment
           type: string
         snowRequest:
-          title: Request
+          title: Request Needed
           type: string
   steps:
     - id: snowCreate
