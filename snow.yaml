@@ -6,8 +6,6 @@ metadata:
   description: Create a record in ServiceNow table
   tags:
     - snow
-    - ServiceNow
-    - TableAPI
 spec:
   owner: rhdh
   type: service
