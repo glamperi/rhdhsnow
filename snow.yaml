@@ -16,7 +16,7 @@ spec:
         - snowName
       properties:
         snowName:
-          title: Entry Name Table 2
+          title: Entry Name Table 3
           type: string
   steps:
     - id: snowCreate
@@ -26,12 +26,11 @@ spec:
         tableName: u_rhdhsnowrhdhsnow
         requestBody: {
              u_namename: "${{ parameters.snowName }}",
-             u_name: test,
-             name: tester
+             u_name: test
          }
 
   output:
     text:
     - title: More information
       content: |
-        **Results** `${{ steps['snowCreate'].output.result }}`
+        **Results** `${{ steps['snowCreate'].output.result }}` You Entered Name : "${{ parameters.snowName }}"
