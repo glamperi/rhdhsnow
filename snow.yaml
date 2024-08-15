@@ -16,7 +16,7 @@ spec:
         - snowName
       properties:
         snowName:
-          title: Entry Name Table1
+          title: Entry Name Table 1
           type: string
   steps:
     - id: snowCreate
