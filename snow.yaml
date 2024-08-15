@@ -26,7 +26,7 @@ spec:
         tableName: rhdhsnow
         name: ${{ parameters.orgName }}
         requestBody: {
-             u_namename: Name1
+             u_namename: ${{ parameters.orgName }}
          }
 
   output:
