@@ -1,0 +1,35 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: snow-devhub
+  title: Service Now dev hub
+  description: Create a record in ServiceNow table
+  tags:
+    - snow
+spec:
+  owner: rhdh
+  type: service
+
+    parameters:
+    - title: Provide Name Entry for snow table
+      required:
+        - snowName
+      properties:
+        snowName:
+          title: Entry Name
+          type: string
+  steps:
+    - id: snowCreate
+      name: Snow
+      action: servicenow:now:table:createRecord
+      input:
+        tableName: rhdhsnow
+        requestBody: {
+             u_namename: ${{ parameters.orgName }}
+         }
+
+  output:
+    text:
+    - title: More information
+      content: |
+        **Results** `${{ steps['snowCreate'].output.result }}` and ${{ parameters.orgName }}
