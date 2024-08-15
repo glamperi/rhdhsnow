@@ -26,7 +26,8 @@ spec:
         tableName: u_rhdhsnowrhdhsnow
         requestBody: {
              u_namename: "${{ parameters.snowName }}",
-             u_name: test
+             u_name: test,
+             name: tester
          }
 
   output:
