@@ -16,7 +16,7 @@ spec:
         - snowName
       properties:
         snowName:
-          title: Entry Name
+          title: Entry Table Name
           type: string
   steps:
     - id: snowCreate
@@ -26,7 +26,7 @@ spec:
         tableName: u_rhdhsnowrhdhsnow
         name: ${{ parameters.orgName }}
         requestBody: {
-             u_namename: ${{ parameters.orgName }}
+             u_namename: "${{ parameters.orgName }}"
          }
 
   output:
