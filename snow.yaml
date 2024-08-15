@@ -24,12 +24,13 @@ spec:
       action: servicenow:now:table:createRecord
       input:
         tableName: rhdhsnow
+        name: ${{ parameters.orgName }}
         requestBody: {
-             u_namename: ${{ parameters.orgName }}
+             u_namename: Name1
          }
 
   output:
     text:
     - title: More information
       content: |
-        **Results** `${{ steps['snowCreate'].output.result }}` and ${{ parameters.orgName }}
+        **Results** `${{ steps['snowCreate'].output.result }}`
