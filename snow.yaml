@@ -16,7 +16,7 @@ spec:
         - snowName
       properties:
         snowName:
-          title: Entry Name Table
+          title: Entry Name Table1
           type: string
   steps:
     - id: snowCreate
@@ -24,7 +24,6 @@ spec:
       action: servicenow:now:table:createRecord
       input:
         tableName: u_rhdhsnowrhdhsnow
-        name: ${{ parameters.snowName }}
         requestBody: {
              u_namename: "${{ parameters.snowName }}"
          }
