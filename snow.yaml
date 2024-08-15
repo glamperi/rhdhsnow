@@ -16,7 +16,13 @@ spec:
         - snowName
       properties:
         snowName:
-          title: Entry Name Table 3
+          title: Requester Name
+          type: string
+        snowDept:
+          title: Requester Deptartment
+          type: string
+        snowRequest:
+          title: Request
           type: string
   steps:
     - id: snowCreate
@@ -26,6 +32,8 @@ spec:
         tableName: u_rhdhsnowrhdhsnow
         requestBody: {
              u_namename: "${{ parameters.snowName }}",
+             u_dept: "${{ parameters.snowDept }}",
+             u_request: "${{ parameters.snowRequest }}",
              u_name: test
          }
 
@@ -33,4 +41,4 @@ spec:
     text:
     - title: More information
       content: |
-        **Results** `${{ steps['snowCreate'].output.result }}` You Entered Name : "${{ parameters.snowName }}"
+        **Results** `${{ steps['snowCreate'].output.result }}` You Entered Name : "${{ parameters.snowName }}, ${{ parameters.snowDept }}, ${{ parameters.snowRequest }}"
