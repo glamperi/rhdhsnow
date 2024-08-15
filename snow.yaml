@@ -10,7 +10,7 @@ spec:
   owner: rhdh
   type: service
 
-    parameters:
+  parameters:
     - title: Provide Name Entry for snow table
       required:
         - snowName
