@@ -23,7 +23,7 @@ spec:
       name: Snow
       action: servicenow:now:table:createRecord
       input:
-        tableName: rhdhsnow
+        tableName: u_rhdhsnowrhdhsnow
         name: ${{ parameters.orgName }}
         requestBody: {
              u_namename: ${{ parameters.orgName }}
